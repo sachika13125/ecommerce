@@ -9,7 +9,8 @@ export function Header ({
   total, 
   setTotal,
   countProducts,
-  setCountProducts }){
+  setCountProducts,
+  headerRef }){
   
   const [active, setActive] = useState(false)
   
@@ -29,9 +30,14 @@ export function Header ({
     setCountProducts(0)
   }
 
+  const scrollToCart = () => {
+    if (headerRef.current) {
+      headerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <header>
-        <h1>Ecommerce</h1>
         <div className='container-icon'>
           <div className='container-cart-icon' onClick={() => setActive(!active)}>
             <svg
@@ -97,7 +103,7 @@ export function Header ({
               <button className='btn-clear-all' onClick={clearCart}>
 								Clear cart
 							</button>
-              <button className='btn-checkout'>
+              <button className='btn-checkout' onClick={scrollToCart}>
 								Checkout
 							</button>
             </>
@@ -109,6 +115,7 @@ export function Header ({
 
 							
         <Filters onChange={changeFilters} />
+        <div ref={headerRef}></div>
     </header>
   )
 }
