@@ -3,6 +3,7 @@ import { products as initialProducts } from './data/products.json'
 import { Products } from './components/Products'
 import { Header } from './components/Header'
 import { useState } from 'react'
+import { SearchBarContainer } from './components/SearchBarContainer'
 
 function App() {
   const [products] = useState(initialProducts)
@@ -28,6 +29,7 @@ function App() {
   return (
     <>
       <Header changeFilters={setFilters} />
+      <SearchBarContainer />
       <Products products={filteredProducts} />
     </>
   )
