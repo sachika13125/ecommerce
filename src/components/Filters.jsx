@@ -28,7 +28,7 @@ export function Filters ({ onChange }) {
                 <span>${minPrice}</span>
             </div>
             <div>
-                <label htmlFor="category">Categoria</label>
+                <label htmlFor="category">Category</label>
                 <select id="category" onChange={handleChangeCategory}>
                     <option value="all">All</option>
                     <option value="laptops">Laptops</option>
