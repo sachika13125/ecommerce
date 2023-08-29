@@ -5,6 +5,11 @@ import { Header } from './components/Header'
 import { useState } from 'react'
 
 function App() {
+
+  const [allProducts, setAllProducts] = useState([])
+  const [total, setTotal] = useState(0)
+  const [countProducts, setCountProducts] = useState(0)
+
   const [products] = useState(initialProducts)
   const [filters, setFilters] = useState({
     category: 'all',
@@ -18,7 +23,7 @@ function App() {
         (
           filters.category === 'all' ||
           product.category === filters.category 
-        ) 
+        )
       )
     })
   }
@@ -27,8 +32,20 @@ function App() {
 
   return (
     <>
-      <Header changeFilters={setFilters} />
-      <Products products={filteredProducts} />
+      <Header changeFilters={setFilters} 
+      allProducts={allProducts}
+      setAllProducts={setAllProducts}
+      total={total}
+      setTotal={setTotal}
+      countProducts={countProducts}
+      setCountProducts={setCountProducts} />
+      <Products products={filteredProducts}
+      allProducts={allProducts}
+      setAllProducts={setAllProducts}
+      total={total}
+      setTotal={setTotal}
+      countProducts={countProducts}
+      setCountProducts={setCountProducts} />
     </>
   )
 }
