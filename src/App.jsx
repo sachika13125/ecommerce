@@ -6,11 +6,12 @@ import { useState } from 'react'
 import { SearchBarContainer } from './components/SearchBarContainer'
 
 function App() {
-  const [products] = useState(initialProducts)
+  const [products] = useState(initialProducts);
   const [filters, setFilters] = useState({
     category: 'all',
-    minPrice: 0
-  })
+    minPrice: 0,
+    search: ''
+  });
 
   const filterProducts = (products) => {
     return products.filter(product => {
@@ -19,7 +20,11 @@ function App() {
         (
           filters.category === 'all' ||
           product.category === filters.category 
-        ) 
+        ) &&
+        (
+          filters.search === '' ||
+          product.title.toLowerCase().includes(filters.search.toLowerCase())
+        )
       )
     })
   }
@@ -29,7 +34,7 @@ function App() {
   return (
     <>
       <Header changeFilters={setFilters} />
-      <SearchBarContainer />
+      <SearchBarContainer products={products} />
       <Products products={filteredProducts} />
     </>
   )
