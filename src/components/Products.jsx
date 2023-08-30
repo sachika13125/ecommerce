@@ -1,5 +1,5 @@
 import './Products.css'
-import Popup from "./Popup";
+import Popup from "./Popup.jsx";
 import React, { useState } from 'react'
 
 
