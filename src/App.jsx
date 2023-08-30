@@ -1,11 +1,11 @@
 import './App.css'
 import { products as initialProducts } from './data/products.json'
-import { Products } from './components/Products'
-import { Header } from './components/Header'
+import { Products } from './components/Products.jsx'
+import { Header } from './components/Header.jsx'
 
 import { useState, useRef } from 'react'
-import { SearchBarContainer } from './components/SearchBarContainer'
-import { Cart } from './components/Cart'
+import { SearchBarContainer } from './components/SearchBarContainer.jsx'
+import { Cart } from './components/Cart.jsx'
 
 
 function App() {

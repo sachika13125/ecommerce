@@ -1,7 +1,7 @@
-import { Filters } from './Filters'
+import { Filters } from './Filters.jsx'
 import { useState } from 'react';
 import './Header.css'
-import SearchProducts from './SearchProducts'
+import SearchProducts from './SearchProducts.jsx'
 
 export function Header ({ 
   changeFilters,
