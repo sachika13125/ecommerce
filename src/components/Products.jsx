@@ -2,14 +2,14 @@ import './Products.css'
 import Popup from "./Popup.jsx";
 import React, { useState, useEffect } from 'react'
 
-
 export function Products ({ 
     allProducts, 
     setAllProducts, 
     total, 
     setTotal,
     countProducts,
-    setCountProducts }) {
+    setCountProducts, 
+}) {
 
     const [products, setProducts] = useState([]);
     const [showModal, setShowModal] = useState(false);
@@ -19,7 +19,7 @@ export function Products ({
     
     const fetchProducts = async () => {
         try {
-          const response = await fetch('http://localhost:5000/api/products'); // サーバーサイドのAPIエンドポイント
+          const response = await fetch('http://localhost:5000/api/products'); 
           const responseData = await response.json();
           const productsData = responseData.products;
           setProducts(productsData);
@@ -30,9 +30,9 @@ export function Products ({
 
 
     
-      useEffect(() => {
+    useEffect(() => {
         fetchProducts();
-        }, []);
+    }, []);
 
 
     const onAddProduct = product => {
@@ -57,7 +57,7 @@ export function Products ({
     const openModal = (product) => {
         setSelectedProduct(product);
         setShowModal(true);
-      };
+    };
     
 
 
@@ -65,6 +65,7 @@ export function Products ({
 
     return (
         <main className='products'>
+
             <ul>
                 {products.map(product => (
                     <li key={product.id}>
