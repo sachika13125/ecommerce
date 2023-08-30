@@ -28,7 +28,7 @@ const Popup = (props) => {
     if (currentIndex < product.images.length - 1) {
       setCurrentIndex(currentIndex + 1);
       console.log('Current Index:', currentIndex);
-    }
+    };
   };
 
 
