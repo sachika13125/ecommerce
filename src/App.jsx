@@ -2,12 +2,14 @@ import './App.css'
 import { products as initialProducts } from './data/products.json'
 import { Products } from './components/Products'
 import { Header } from './components/Header'
+
 import { useState, useRef } from 'react'
 import { SearchBarContainer } from './components/SearchBarContainer'
 import { Cart } from './components/Cart'
 
 
 function App() {
+
 
   const [allProducts, setAllProducts] = useState([])
   const [total, setTotal] = useState(0)
