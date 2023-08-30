@@ -1,22 +1,40 @@
 import './Products.css'
 import Popup from "./Popup";
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 
 export function Products ({ 
-    products, 
     allProducts, 
     setAllProducts, 
-    countProducts, 
-    setCountProducts,
     total, 
-    setTotal }) {
+    setTotal,
+    countProducts,
+    setCountProducts }) {
 
+    const [products, setProducts] = useState([]);
     const [showModal, setShowModal] = useState(false);
-    const [selectedProductImages, setSelectedProductImages] = useState('');
-    const [selectedProductTitles, setSelectedProductTitles] = useState('');
-    const [selectedProductPrices, setSelectedProductPrices] = useState('');
-    const [selectedProductDescription, setSelectedProductDescription] = useState('');
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    
+    
+    const fetchProducts = async () => {
+        try {
+          const response = await fetch('http://localhost:5000/api/products'); // サーバーサイドのAPIエンドポイント
+          const responseData = await response.json();
+          const productsData = responseData.products;
+          setProducts(productsData);
+        } catch (error) {
+          console.error('Error fetching products:', error);
+        }
+      };
+
+
+    
+      useEffect(() => {
+        fetchProducts();
+        }, []);
+
+
     const onAddProduct = product => {
 
         if(allProducts.find(item => item.id === product.id)){
@@ -35,16 +53,15 @@ export function Products ({
         setCountProducts(countProducts + product.quantity)
         setAllProducts([...allProducts, product])
     }
-    console.log(allProducts)
 
-    const ShowModal = (product) => {
-        setSelectedProductImages(product.images);
-        setSelectedProductTitles(product.title);
-        setSelectedProductPrices(product.price);
-        setSelectedProductDescription(product.description);
-
+    const openModal = (product) => {
+        setSelectedProduct(product);
         setShowModal(true);
       };
+    
+
+
+
 
     return (
         <main className='products'>
@@ -54,7 +71,7 @@ export function Products ({
                         <img 
                         src={product.thumbnail} 
                         alt={product.title}
-                        onClick={() => ShowModal(product)}
+                        onClick={() => openModal(product)}
                         />
                         <div>
                             <strong>{product.title} ${product.price}</strong>
@@ -70,10 +87,7 @@ export function Products ({
             <Popup 
             showFlag={showModal} 
             setShowModal={setShowModal}
-            productImages={selectedProductImages}
-            productTitles={selectedProductTitles}
-            productPrices={selectedProductPrices}
-            productDescription={selectedProductDescription}
+            product={selectedProduct}
             />
         </main>
     )

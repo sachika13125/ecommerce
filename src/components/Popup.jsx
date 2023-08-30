@@ -3,10 +3,11 @@ import './Popup.css'
 
 const Popup = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { showFlag, setShowModal, product } = props;
 
   useEffect(() => {
     setCurrentIndex(0);
-  }, [props.showFlag]);
+  }, [showFlag]);
   
 
 
@@ -24,7 +25,7 @@ const Popup = (props) => {
   const goToNextImage = () => {
     console.log('Next Image Clicked');
 
-    if (currentIndex < props.productImages.length - 1) {
+    if (currentIndex < product.images.length - 1) {
       setCurrentIndex(currentIndex + 1);
       console.log('Current Index:', currentIndex);
     }
@@ -35,15 +36,15 @@ const Popup = (props) => {
 
   return (
     <>
-      {props.showFlag ? (
-        <div id="overlay" onClick={() => { props.setShowModal(false) }}>
+      {showFlag ? (
+        <div id="overlay" onClick={() => { setShowModal(false) }}>
 
           <div id="modalContent" onClick={handleModalContentClick}>
 
             <div className="images-container">
               <div className='img-section'>
                 <img
-                  src={props.productImages[currentIndex]} // 現在のcurrentIndexに対応する画像を表示
+                  src={product.images[currentIndex]} // 現在のcurrentIndexに対応する画像を表示
                   alt={`Product Image ${currentIndex}`}
                   className="current-image"
                 />
@@ -52,12 +53,12 @@ const Popup = (props) => {
               </div>
 
               <div className='describe-section'>
-                <p>{props.productTitles}</p>
-                <p>CAD: {props.productPrices}</p>
-                <p>{props.productDescription}</p>
+                <p>{product.title}</p>
+                <p>CAD: {product.price}</p>
+                <p>{product.description}</p>
               </div>  
             </div>
-            <button onClick={() => { props.setShowModal(false) }} className='x-btn'>x</button>
+            <button onClick={() => { setShowModal(false) }} className='x-btn'>x</button>
           </div>
         </div>
       ) : (
