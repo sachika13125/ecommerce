@@ -6,6 +6,7 @@ import { useState, useRef } from 'react'
 import { SearchBarContainer } from './components/SearchBarContainer'
 import { Cart } from './components/Cart'
 
+
 function App() {
 
   const [allProducts, setAllProducts] = useState([])
@@ -30,8 +31,7 @@ function App() {
           product.category === filters.category 
         ) &&
         (
-          filters.search === '' ||
-          product.title.toLowerCase().includes(filters.search.toLowerCase())
+          (product.title.toLowerCase().includes(filters.search.toLowerCase()))
         )
       )
     })
@@ -41,7 +41,13 @@ function App() {
 
   return (
     <>
-      <Header changeFilters={setFilters} 
+      <Header changeFilters={setFilters}
+      changeSearch={(newSearchTerm) => {
+        setFilters((prevFilters) => ({
+          ...prevFilters,
+          search: newSearchTerm,
+        }));
+      }}
       allProducts={allProducts}
       setAllProducts={setAllProducts}
       total={total}
