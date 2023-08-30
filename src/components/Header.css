@@ -9,10 +9,15 @@
 }
 
 .container-icon {
+    position: fixed;
+    right: 0;
+    top: 10px;
+    z-index: 10;
+    background-color: rgba(0, 216, 0, 0.8);
+    border-radius: 50%;
     display: flex;
 	justify-content: space-between;
-	padding: 30px 0 40px 0;
-    position: relative;
+	padding: 10px 10px 10px 10px;
 }
 
 .count-products {
@@ -31,12 +36,12 @@
     border-radius: 50%;
 }
 
-#contador-productos {
+#products-counter {
     font-size: 12px;
 }
 
 .container-cart-products {
-    position: absolute;
+    position: fixed;
     top: 50px;
     right: 0;
 
@@ -62,17 +67,17 @@
     flex: 0.8;
 }
 
-.titulo-producto-carrito {
+.title-product-cart {
     font-size: 20px;
 }
 
-.precio-producto-carrito {
+.price-product-cart {
     font-weight: 700;
     font-size: 20px;
     margin-left: 10px;
 }
 
-.cantidad-producto-carrito {
+.quantity-product-cart {
     font-weight: 400;
     font-size: 20px;
 }
@@ -100,7 +105,7 @@
     font-weight: 700;
 }
 
-.total-pagar {
+.total-sum {
     font-size: 20px;
     font-weight: 900;
 }

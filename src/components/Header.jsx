@@ -57,7 +57,7 @@ export function Header ({
             />
             </svg>
             <div className='count-products'>
-              <span id='contador-productos'>{countProducts}</span>
+              <span id='products-counter'>{countProducts}</span>
             </div>
           </div>
         </div>  
@@ -69,13 +69,13 @@ export function Header ({
                 {allProducts.map(product => (
                   <div className='cart-product' key={product.id}>
                     <div className='info-cart-product'>
-                      <span className='cantidad-producto-carrito'>
+                      <span className='quantity-product-cart'>
                         {product.quantity}
                       </span>
-                      <p className='titulo-producto-carrito'>
+                      <p className='title-product-cart'>
                         {product.title} 
                       </p>
-                      <span className='precio-producto-carrito'>
+                      <span className='price-product-cart'>
                         ${product.price * product.quantity}
                       </span>
                     </div>
@@ -100,7 +100,7 @@ export function Header ({
               </div>
               <div className='cart-total'>
                 <h3>Total:</h3>
-                <span className='total-pagar'>${total}</span>
+                <span className='total-sum'>${total}</span>
               </div>
               <button className='btn-clear-all' onClick={clearCart}>
 								Clear cart
