@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react';
-
+import Popup from "./Popup";
 import {FaSearch} from 'react-icons/fa';
 import './SearchBarContainer.css';
 
@@ -22,6 +22,21 @@ export const SearchBarContainer = ({ products }) => {
       setResults(results);
   };
 
+  const [showModal, setShowModal] = useState(false);
+    const [selectedProductImages, setSelectedProductImages] = useState('');
+    const [selectedProductTitles, setSelectedProductTitles] = useState('');
+    const [selectedProductPrices, setSelectedProductPrices] = useState('');
+    const [selectedProductDescription, setSelectedProductDescription] = useState('');
+
+  const ShowModal = (results) => {
+    setSelectedProductImages(results.images);
+    setSelectedProductTitles(results.title);
+    setSelectedProductPrices(results.price);
+    setSelectedProductDescription(results.description);
+
+    setShowModal(true);
+  };
+
   return (
     <>
         <div className='search-bar-container'>
@@ -35,12 +50,21 @@ export const SearchBarContainer = ({ products }) => {
         {
           results.map((result) => {
             return (
-              <div className='search-result' onClick={(e) => alert(`You clicked on ${result}`)}>
+              <div className='search-result' key={result.id} onClick={() => ShowModal(result)}>
                 {result.title}
               </div>
             )
           })
         }
-    </div>    </>
+    </div> 
+    <Popup 
+            showFlag={showModal} 
+            setShowModal={setShowModal}
+            productImages={selectedProductImages}
+            productTitles={selectedProductTitles}
+            productPrices={selectedProductPrices}
+            productDescription={selectedProductDescription}
+            />
+    </>
   )
 }
