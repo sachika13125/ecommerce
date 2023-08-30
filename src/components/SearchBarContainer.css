@@ -25,3 +25,23 @@ input:focus {
 #search-icon {
     color: rgb(54, 128, 196);
 }
+
+.results-list {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 8px #ddd;
+    border-radius: 10px;
+    margin-top: 1rem;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.search-result {
+    padding: 10px 20px;
+}
+
+.search-result:hover {
+    background-color: #efefef;
+}
