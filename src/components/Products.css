@@ -1,8 +1,6 @@
 .products {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .products ul {
@@ -10,7 +8,7 @@
   grid-template-columns: repeat(
     auto-fit,
     minmax(
-      200px,
+      300px,
       1fr
     )
   );

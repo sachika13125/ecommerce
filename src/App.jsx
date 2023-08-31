@@ -47,6 +47,7 @@ function App() {
   return (
     <>
       <Nav />
+      <SearchBarContainer products={products} />
       <Hero />
       <Header changeFilters={setFilters}
       changeSearch={(newSearchTerm) => {
@@ -62,7 +63,6 @@ function App() {
       countProducts={countProducts}
       setCountProducts={setCountProducts}
       headerRef={headerRef} />
-      <SearchBarContainer products={products} />
       <Products products={filteredProducts}
       allProducts={allProducts}
       setAllProducts={setAllProducts}
