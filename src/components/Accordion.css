@@ -1,0 +1,7 @@
+div.active {
+    display: block; 
+}
+
+div.active .p-5 {
+    background-color: #edf2f7; 
+}

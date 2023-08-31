@@ -33,7 +33,7 @@ export const SearchBarContainer = ({ products }) => {
   };
 
   return (
-    <>
+    <div className='search-bar'>
       <div className='search-bar-container'>
         <div className='input-wrapper'>
           <FaSearch id='search-icon' />
@@ -57,6 +57,6 @@ export const SearchBarContainer = ({ products }) => {
         setShowModal={setShowModal}
         product={selectedProduct}
       />
-    </>
+    </div>
   )
 }

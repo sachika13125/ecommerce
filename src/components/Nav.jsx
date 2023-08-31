@@ -14,16 +14,9 @@ function classNames(...classes) {
 export default function Nav() {
   return (
     <Disclosure as="nav" className="bg-gray-800">
-          <div className="w-full mx-auto px-2 sm:px-6 lg:px-8 bg-gray-800">
+          <div className="w-full mx-auto px-2 sm:px-6 lg:px-8 bg-black">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                </div>
+              <div className="flex flex-1 items-center justify-between sm:items-stretch">
                 <div className="sm:ml-6 sm:block">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
@@ -40,6 +33,16 @@ export default function Nav() {
                       </a>
                     ))}
                   </div>
+                </div>
+                <div className="flex flex-shrink-0 justify-center items-center">
+                  <span className='w-auto  text-white font-bold tracking-widest text-lg'>CREST FACTOR</span>
+                </div>
+                <div className='text-white flex items-center justify-between'>
+                  <ul className='flex gap-9'>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Pinterest</li>
+                  </ul>
                 </div>
               </div>
             </div>

@@ -1,0 +1,599 @@
+{
+    "products": [
+        {
+            "id": 36,
+            "title": "Classic Logo T-Shirt",
+            "description": "Show off your style with this classic logo t-shirt. Comfortable fit and iconic brand logo.",
+            "price": 25,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.7,
+            "stock": 50,
+            "brand": "StreetGear",
+            "category": "t-shirts",
+            "thumbnail": "https://i.dummyjson.com/products/36/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/36/image1.jpg",
+                "https://i.dummyjson.com/products/36/image2.jpg"
+            ]
+        },
+        {
+            "id": 37,
+            "title": "Urban Camo Hoodie",
+            "description": "Blend into the cityscape with this urban camo hoodie. Stylish design and warm fabric.",
+            "price": 60,
+            "quantity": 1,
+            "discountPercentage": 15.0,
+            "rating": 4.8,
+            "stock": 30,
+            "brand": "CityBlend",
+            "category": "hoodies",
+            "thumbnail": "https://i.dummyjson.com/products/37/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/37/image1.jpg",
+                "https://i.dummyjson.com/products/37/image2.jpg"
+            ]
+        },
+        {
+            "id": 38,
+            "title": "Cozy Knit Sweater",
+            "description": "Stay cozy and stylish with this knit sweater. Perfect for chilly days and versatile outfits.",
+            "price": 45,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.6,
+            "stock": 25,
+            "brand": "UrbanKnits",
+            "category": "sweaters",
+            "thumbnail": "https://i.dummyjson.com/products/38/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/38/image1.jpg",
+                "https://i.dummyjson.com/products/38/image2.jpg"
+            ]
+        },
+        {
+            "id": 39,
+            "title": "Street Snapback Cap",
+            "description": "Top off your look with this street snapback cap. Adjustable fit and embroidered logo.",
+            "price": 20,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 40,
+            "brand": "SnapStreet",
+            "category": "caps",
+            "thumbnail": "https://i.dummyjson.com/products/39/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/39/image1.jpg",
+                "https://i.dummyjson.com/products/39/image2.jpg"
+            ]
+        },
+        {
+            "id": 40,
+            "title": "Urban Vibes Backpack",
+            "description": "Carry your essentials with urban vibes in this backpack. Sleek design with practical compartments.",
+            "price": 35,
+            "quantity": 1,
+            "discountPercentage": 12.0,
+            "rating": 4.7,
+            "stock": 35,
+            "brand": "VibePack",
+            "category": "accessories",
+            "thumbnail": "https://i.dummyjson.com/products/40/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/40/image1.jpg",
+                "https://i.dummyjson.com/products/40/image2.jpg"
+            ]
+        },
+        {
+            "id": 41,
+            "title": "Graphic Print Tee",
+            "description": "Make a statement with this unique graphic print tee. Expressive design and comfortable fit.",
+            "price": 28,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.6,
+            "stock": 45,
+            "brand": "ArtisticWear",
+            "category": "t-shirts",
+            "thumbnail": "https://i.dummyjson.com/products/41/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/41/image1.jpg",
+                "https://i.dummyjson.com/products/41/image2.jpg"
+            ]
+        },
+        {
+            "id": 42,
+            "title": "Casual Striped Sweater",
+            "description": "Embrace a casual look with this striped sweater. Soft fabric and timeless striped pattern.",
+            "price": 42,
+            "quantity": 1,
+            "discountPercentage": 12.0,
+            "rating": 4.7,
+            "stock": 28,
+            "brand": "CasualEssentials",
+            "category": "sweaters",
+            "thumbnail": "https://i.dummyjson.com/products/42/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/42/image1.jpg",
+                "https://i.dummyjson.com/products/42/image2.jpg"
+            ]
+        },
+        {
+            "id": 43,
+            "title": "Classic Denim Cap",
+            "description": "Complete your outfit with this classic denim cap. Durable denim material and adjustable strap.",
+            "price": 18,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 50,
+            "brand": "DenimStyle",
+            "category": "caps",
+            "thumbnail": "https://i.dummyjson.com/products/43/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/43/image1.jpg",
+                "https://i.dummyjson.com/products/43/image2.jpg"
+            ]
+        },
+        {
+            "id": 44,
+            "title": "Active Lifestyle Hoodie",
+            "description": "Elevate your active lifestyle with this performance hoodie. Moisture-wicking fabric and modern design.",
+            "price": 55,
+            "quantity": 1,
+            "discountPercentage": 15.0,
+            "rating": 4.8,
+            "stock": 35,
+            "brand": "ActiveGear",
+            "category": "hoodies",
+            "thumbnail": "https://i.dummyjson.com/products/44/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/44/image1.jpg",
+                "https://i.dummyjson.com/products/44/image2.jpg"
+            ]
+        },
+        {
+            "id": 45,
+            "title": "Minimalist Leather Wallet",
+            "description": "Simplify your essentials with this minimalist leather wallet. Quality leather and compact design.",
+            "price": 30,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.6,
+            "stock": 40,
+            "brand": "SimpleLux",
+            "category": "accessories",
+            "thumbnail": "https://i.dummyjson.com/products/45/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/45/image1.jpg",
+                "https://i.dummyjson.com/products/45/image2.jpg"
+            ]
+        },
+        {
+            "id": 46,
+            "title": "Retro Logo T-shirt",
+            "description": "Step back in time with this retro logo t-shirt. Vintage design and comfortable fit.",
+            "price": 25,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 55,
+            "brand": "VintageVibe",
+            "category": "t-shirts",
+            "thumbnail": "https://i.dummyjson.com/products/46/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/46/image1.jpg",
+                "https://i.dummyjson.com/products/46/image2.jpg"
+            ]
+        },
+        {
+            "id": 47,
+            "title": "Cozy Knit Sweater",
+            "description": "Stay cozy in style with this knit sweater. Warm and soft knit fabric for colder days.",
+            "price": 48,
+            "quantity": 1,
+            "discountPercentage": 12.0,
+            "rating": 4.7,
+            "stock": 30,
+            "brand": "WarmStyles",
+            "category": "sweaters",
+            "thumbnail": "https://i.dummyjson.com/products/47/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/47/image1.jpg",
+                "https://i.dummyjson.com/products/47/image2.jpg"
+            ]
+        },
+        {
+            "id": 48,
+            "title": "Snapback Trucker Cap",
+            "description": "Complete your casual look with this snapback trucker cap. Mesh back and adjustable snap closure.",
+            "price": 22,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.6,
+            "stock": 40,
+            "brand": "UrbanSnap",
+            "category": "caps",
+            "thumbnail": "https://i.dummyjson.com/products/48/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/48/image1.jpg",
+                "https://i.dummyjson.com/products/48/image2.jpg"
+            ]
+        },
+        {
+            "id": 49,
+            "title": "Sporty Zip-up Hoodie",
+            "description": "Elevate your sporty style with this zip-up hoodie. Sleek design and convenient front pockets.",
+            "price": 42,
+            "quantity": 1,
+            "discountPercentage": 15.0,
+            "rating": 4.8,
+            "stock": 25,
+            "brand": "SportPlus",
+            "category": "hoodies",
+            "thumbnail": "https://i.dummyjson.com/products/49/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/49/image1.jpg",
+                "https://i.dummyjson.com/products/49/image2.jpg"
+            ]
+        },
+        {
+            "id": 50,
+            "title": "Classic Leather Belt",
+            "description": "Complete your outfit with this classic leather belt. Genuine leather and timeless buckle design.",
+            "price": 35,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 50,
+            "brand": "LeatherCrafted",
+            "category": "accessories",
+            "thumbnail": "https://i.dummyjson.com/products/50/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/50/image1.jpg",
+                "https://i.dummyjson.com/products/50/image2.jpg"
+            ]
+        },
+        {
+            "id": 51,
+            "title": "Graphic Print T-shirt",
+            "description": "Express yourself with this unique graphic print t-shirt. High-quality print on comfortable fabric.",
+            "price": 28,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.6,
+            "stock": 35,
+            "brand": "ArtisticWear",
+            "category": "t-shirts",
+            "thumbnail": "https://i.dummyjson.com/products/51/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/51/image1.jpg",
+                "https://i.dummyjson.com/products/51/image2.jpg"
+            ]
+        },
+        {
+            "id": 52,
+            "title": "Casual Everyday Hoodie",
+            "description": "A must-have for your casual wardrobe, this everyday hoodie offers comfort and style.",
+            "price": 38,
+            "quantity": 1,
+            "discountPercentage": 12.0,
+            "rating": 4.7,
+            "stock": 40,
+            "brand": "CasualFlex",
+            "category": "hoodies",
+            "thumbnail": "https://i.dummyjson.com/products/52/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/52/image1.jpg",
+                "https://i.dummyjson.com/products/52/image2.jpg"
+            ]
+        },
+        {
+            "id": 53,
+            "title": "Knit Beanie Hat",
+            "description": "Stay warm and stylish with this knit beanie hat. Soft fabric and stretchy fit.",
+            "price": 18,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 60,
+            "brand": "WinterBlend",
+            "category": "hats",
+            "thumbnail": "https://i.dummyjson.com/products/53/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/53/image1.jpg",
+                "https://i.dummyjson.com/products/53/image2.jpg"
+            ]
+        },
+        {
+            "id": 54,
+            "title": "Comfy Crewneck Sweater",
+            "description": "Embrace comfort and style with this crewneck sweater. Perfect for a relaxed day.",
+            "price": 45,
+            "quantity": 1,
+            "discountPercentage": 15.0,
+            "rating": 4.8,
+            "stock": 30,
+            "brand": "RelaxThreads",
+            "category": "sweaters",
+            "thumbnail": "https://i.dummyjson.com/products/54/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/54/image1.jpg",
+                "https://i.dummyjson.com/products/54/image2.jpg"
+            ]
+        },
+        {
+            "id": 55,
+            "title": "Sleek Leather Wallet",
+            "description": "Organize your essentials with this sleek leather wallet. Ample card slots and durable design.",
+            "price": 28,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.6,
+            "stock": 50,
+            "brand": "LeatherCrafted",
+            "category": "accessories",
+            "thumbnail": "https://i.dummyjson.com/products/55/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/55/image1.jpg",
+                "https://i.dummyjson.com/products/55/image2.jpg"
+            ]
+        },
+        {
+            "id": 56,
+            "title": "Vintage Logo Print Tee",
+            "description": "Add a touch of nostalgia with this vintage logo print tee. Classic design and comfortable fit.",
+            "price": 24,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 25,
+            "brand": "Retronique",
+            "category": "t-shirts",
+            "thumbnail": "https://i.dummyjson.com/products/56/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/56/image1.jpg",
+                "https://i.dummyjson.com/products/56/image2.jpg"
+            ]
+        },
+        {
+            "id": 57,
+            "title": "Urban Street Art Hoodie",
+            "description": "Make a statement with this urban street art hoodie. Unique graphics and high-quality fabric.",
+            "price": 42,
+            "quantity": 1,
+            "discountPercentage": 12.0,
+            "rating": 4.7,
+            "stock": 20,
+            "brand": "UrbanEdge",
+            "category": "hoodies",
+            "thumbnail": "https://i.dummyjson.com/products/57/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/57/image1.jpg",
+                "https://i.dummyjson.com/products/57/image2.jpg"
+            ]
+        },
+        {
+            "id": 58,
+            "title": "Knitted Winter Scarf",
+            "description": "Stay warm and stylish with this knitted winter scarf. Long enough to wrap comfortably.",
+            "price": 22,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.6,
+            "stock": 30,
+            "brand": "CozyKnits",
+            "category": "accessories",
+            "thumbnail": "https://i.dummyjson.com/products/58/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/58/image1.jpg",
+                "https://i.dummyjson.com/products/58/image2.jpg"
+            ]
+        },
+        {
+            "id": 59,
+            "title": "Casual Striped Sweater",
+            "description": "Elevate your casual look with this striped sweater. Comfortable fit and versatile style.",
+            "price": 38,
+            "quantity": 1,
+            "discountPercentage": 15.0,
+            "rating": 4.8,
+            "stock": 25,
+            "brand": "StripeCraft",
+            "category": "sweaters",
+            "thumbnail": "https://i.dummyjson.com/products/59/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/59/image1.jpg",
+                "https://i.dummyjson.com/products/59/image2.jpg"
+            ]
+        },
+        {
+            "id": 60,
+            "title": "Classic Baseball Cap",
+            "description": "Complete your look with this classic baseball cap. Durable, adjustable, and stylish.",
+            "price": 20,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 40,
+            "brand": "CapMasters",
+            "category": "hats",
+            "thumbnail": "https://i.dummyjson.com/products/60/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/60/image1.jpg",
+                "https://i.dummyjson.com/products/60/image2.jpg"
+            ]
+        },
+        {
+            "id": 61,
+            "title": "Retro Geometric Print Tee",
+            "description": "Add a pop of color with this retro geometric print tee. Vibrant design and comfortable fit.",
+            "price": 26,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 15,
+            "brand": "VintageVibe",
+            "category": "t-shirts",
+            "thumbnail": "https://i.dummyjson.com/products/61/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/61/image1.jpg",
+                "https://i.dummyjson.com/products/61/image2.jpg"
+            ]
+        },
+        {
+            "id": 62,
+            "title": "Urban Camo Pattern Hoodie",
+            "description": "Blend in with style with this urban camo pattern hoodie. Unique design and premium quality.",
+            "price": 45,
+            "quantity": 1,
+            "discountPercentage": 12.0,
+            "rating": 4.7,
+            "stock": 20,
+            "brand": "UrbanBlend",
+            "category": "hoodies",
+            "thumbnail": "https://i.dummyjson.com/products/62/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/62/image1.jpg",
+                "https://i.dummyjson.com/products/62/image2.jpg"
+            ]
+        },
+        {
+            "id": 63,
+            "title": "Knitted Pom-Pom Beanie",
+            "description": "Stay cozy and cute with this knitted pom-pom beanie. Soft fabric and adorable pom-pom detail.",
+            "price": 18,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.6,
+            "stock": 30,
+            "brand": "WinterWardrobe",
+            "category": "hats",
+            "thumbnail": "https://i.dummyjson.com/products/63/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/63/image1.jpg",
+                "https://i.dummyjson.com/products/63/image2.jpg"
+            ]
+        },
+        {
+            "id": 64,
+            "title": "Cozy Cable-Knit Sweater",
+            "description": "Wrap yourself in comfort with this cozy cable-knit sweater. Stylish texture and warm feel.",
+            "price": 40,
+            "quantity": 1,
+            "discountPercentage": 15.0,
+            "rating": 4.8,
+            "stock": 25,
+            "brand": "CableCrafted",
+            "category": "sweaters",
+            "thumbnail": "https://i.dummyjson.com/products/64/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/64/image1.jpg",
+                "https://i.dummyjson.com/products/64/image2.jpg"
+            ]
+        },
+        {
+            "id": 65,
+            "title": "Classic Canvas Belt",
+            "description": "Complete your look with this classic canvas belt. Sturdy buckle and adjustable length.",
+            "price": 22,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 40,
+            "brand": "BeltMaster",
+            "category": "accessories",
+            "thumbnail": "https://i.dummyjson.com/products/65/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/65/image1.jpg",
+                "https://i.dummyjson.com/products/65/image2.jpg"
+            ]
+        },
+        {
+            "id": 66,
+            "title": "Vintage Logo Graphic Tee",
+            "description": "Show off your retro style with this vintage logo graphic tee. Distressed design for a worn-in look.",
+            "price": 28,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 20,
+            "brand": "RetroRevive",
+            "category": "t-shirts",
+            "thumbnail": "https://i.dummyjson.com/products/66/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/66/image1.jpg",
+                "https://i.dummyjson.com/products/66/image2.jpg"
+            ]
+        },
+        {
+            "id": 67,
+            "title": "Colorblock Pullover Hoodie",
+            "description": "Stay trendy with this colorblock pullover hoodie. Bold color combinations and comfortable fit.",
+            "price": 42,
+            "quantity": 1,
+            "discountPercentage": 15.0,
+            "rating": 4.7,
+            "stock": 15,
+            "brand": "ChicStreetwear",
+            "category": "hoodies",
+            "thumbnail": "https://i.dummyjson.com/products/67/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/67/image1.jpg",
+                "https://i.dummyjson.com/products/67/image2.jpg"
+            ]
+        },
+        {
+            "id": 68,
+            "title": "Embroidered Logo Dad Cap",
+            "description": "Top off your look with this embroidered logo dad cap. Adjustable strap for the perfect fit.",
+            "price": 20,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.6,
+            "stock": 30,
+            "brand": "CapCulture",
+            "category": "hats",
+            "thumbnail": "https://i.dummyjson.com/products/68/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/68/image1.jpg",
+                "https://i.dummyjson.com/products/68/image2.jpg"
+            ]
+        },
+        {
+            "id": 69,
+            "title": "Chunky Knit Oversized Sweater",
+            "description": "Get a cozy and stylish look with this chunky knit oversized sweater. Perfect for chilly days.",
+            "price": 48,
+            "quantity": 1,
+            "discountPercentage": 12.0,
+            "rating": 4.8,
+            "stock": 25,
+            "brand": "FashionFleece",
+            "category": "sweaters",
+            "thumbnail": "https://i.dummyjson.com/products/69/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/69/image1.jpg",
+                "https://i.dummyjson.com/products/69/image2.jpg"
+            ]
+        },
+        {
+            "id": 70,
+            "title": "Leather Banded Watch",
+            "description": "Complete your outfit with this sleek leather banded watch. Classic design and accurate timekeeping.",
+            "price": 75,
+            "quantity": 1,
+            "discountPercentage": 10.0,
+            "rating": 4.5,
+            "stock": 40,
+            "brand": "WristWonders",
+            "category": "accessories",
+            "thumbnail": "https://i.dummyjson.com/products/70/thumbnail.jpg",
+            "images": [
+                "https://i.dummyjson.com/products/70/image1.jpg",
+                "https://i.dummyjson.com/products/70/image2.jpg"
+            ]
+        }
+    ]
+}

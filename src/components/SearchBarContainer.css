@@ -1,6 +1,13 @@
-.search-bar-container {
+.search-bar {
     z-index: 10;
     position: sticky;
+    top: 0;
+    display: block;
+}
+
+.search-bar-container {
+    z-index: 10;
+    position: relative;
     top: 0;
     display: block;
 }

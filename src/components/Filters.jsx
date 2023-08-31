@@ -36,6 +36,10 @@ export function Filters ({ changeFilters }) {
                     <option value="all">All</option>
                     <option value="laptops">Laptops</option>
                     <option value="smartphones">Smarphones</option>
+                    <option value="home-decoration">Home</option>
+                    <option value="fragrances">Fragrances</option>
+                    <option value="skincare">Skincare</option>
+                    <option value="groceries">Groceries</option>
                 </select>
             </div>
         </section>
