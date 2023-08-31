@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Popup from "./Popup";
+import Popup from "./Popup.jsx";
 import { FaSearch } from 'react-icons/fa';
 import './SearchBarContainer.css';
 
