@@ -21,31 +21,33 @@ function App() {
   const headerRef = useRef(null)
 
   const [products] = useState(initialProducts)
-  const [filters, setFilters] = useState({
-    category: 'all',
-    minPrice: 0,
-    search: ''
-  });
+  // const [filters, setFilters] = useState({
+  //   category: 'all',
+  //   minPrice: 0,
+  //   search: ''
+  // });
 
-  const filterProducts = (products) => {
-    return products.filter(product => {
-      return (
-        product.price >= filters.minPrice && 
-        (
-          filters.category === 'all' ||
-          product.category === filters.category 
-        ) &&
-        (
-          (product.title.toLowerCase().includes(filters.search.toLowerCase()))
-        )
-      )
-    })
-  }
+  // const filterProducts = (products) => {
+  //   return products.filter(product => {
+  //     return (
+  //       product.price >= filters.minPrice && 
+  //       (
+  //         filters.category === 'all' ||
+  //         product.category === filters.category 
+  //       ) &&
+  //       (
+  //         (product.title.toLowerCase().includes(filters.search.toLowerCase()))
+  //       )
+  //     )
+  //   })
+  // }
 
-  const filteredProducts = filterProducts(products)
+  // const filteredProducts = filterProducts(products)
 
   return (
     <>
+      <Header /*changeFilters={setFilters}*/      
+
       <Nav />
       <Hero />
       <Header changeFilters={setFilters}
@@ -63,13 +65,14 @@ function App() {
       setCountProducts={setCountProducts}
       headerRef={headerRef} />
       <SearchBarContainer products={products} />
-      <Products products={filteredProducts}
+      <Products /*products={filteredProducts}*/
       allProducts={allProducts}
       setAllProducts={setAllProducts}
       total={total}
       setTotal={setTotal}
       countProducts={countProducts}
-      setCountProducts={setCountProducts} />
+      setCountProducts={setCountProducts}
+      /*changeFilters={setFilters}*/ />
       <Cart allProducts={allProducts} total={total} headerRef={headerRef} />
       <Footer />
     </>
