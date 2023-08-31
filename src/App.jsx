@@ -2,10 +2,13 @@ import './App.css'
 import { products as initialProducts } from './data/products.json'
 import { Products } from './components/Products.jsx'
 import { Header } from './components/Header.jsx'
-
+import Nav from './components/Nav.jsx'
+import Hero from './components/Hero.jsx'
+import Footer from './components/Footer.jsx'
 import { useState, useRef } from 'react'
 import { SearchBarContainer } from './components/SearchBarContainer.jsx'
 import { Cart } from './components/Cart.jsx'
+
 
 
 function App() {
@@ -43,6 +46,8 @@ function App() {
 
   return (
     <>
+      <Nav />
+      <Hero />
       <Header changeFilters={setFilters}
       changeSearch={(newSearchTerm) => {
         setFilters((prevFilters) => ({
@@ -66,6 +71,7 @@ function App() {
       countProducts={countProducts}
       setCountProducts={setCountProducts} />
       <Cart allProducts={allProducts} total={total} headerRef={headerRef} />
+      <Footer />
     </>
   )
 }
