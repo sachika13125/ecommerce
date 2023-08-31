@@ -22,9 +22,6 @@ export function Filters ({ changeFilters }) {
     }
 
     
-
-
-
     return (
         <section className="filters">
             <div>

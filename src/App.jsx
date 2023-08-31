@@ -46,11 +46,9 @@ function App() {
 
   return (
     <>
-      <Header /*changeFilters={setFilters}*/      
-
       <Nav />
       <Hero />
-      <Header changeFilters={setFilters}
+      <Header /*changeFilters={setFilters}*/
       changeSearch={(newSearchTerm) => {
         setFilters((prevFilters) => ({
           ...prevFilters,
