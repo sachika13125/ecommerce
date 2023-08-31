@@ -1,18 +1,16 @@
-import { Filters } from './Filters.jsx'
 import { useState } from 'react';
 import './Header.css'
-import SearchProducts from './SearchProducts.jsx'
 
 export function Header ({ 
-  changeFilters,
-  changeSearch, 
+  setShowCart,
   allProducts, 
   setAllProducts, 
   total, 
   setTotal,
   countProducts,
   setCountProducts,
-  headerRef }){
+  headerRef,
+  cartRef }){
   
   const [active, setActive] = useState(false)
   
@@ -37,6 +35,15 @@ export function Header ({
       headerRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  const handleCheckoutClick = () => {
+    setShowCart(true)
+    setTimeout(() => {
+      if (cartRef.current) {
+        cartRef.current.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100)
+}
 
   return (
     <header>
@@ -102,10 +109,10 @@ export function Header ({
                 <h3>Total:</h3>
                 <span className='total-sum'>${total}</span>
               </div>
-              <button className='btn-clear-all' onClick={clearCart}>
+              <button className='btn-clear-all' onClick={() => { clearCart(); setShowCart(false); }}>
 								Clear cart
 							</button>
-              <button className='btn-checkout' onClick={scrollToCart}>
+              <button className='btn-checkout' onClick={handleCheckoutClick}>
 								Checkout
 							</button>
             </>
@@ -114,9 +121,6 @@ export function Header ({
             )
           } 
         </div>      
-
-        <Filters onChange={changeFilters} />
-				<SearchProducts onSearch={changeSearch} />
         <div ref={headerRef}></div>
     </header>
   )

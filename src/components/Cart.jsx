@@ -1,9 +1,9 @@
 import React from 'react'
 import './Cart.css'
 
-export function Cart({ allProducts, total, headerRef }) {
+export function Cart({ allProducts, total, headerRef, cartRef }) {
   return (
-  <div className='grid grid-cols-2 gap-4 bg-white'>
+  <div className='grid grid-cols-2 gap-4 bg-white' ref={cartRef}>
     <div className='checkout-container'>
       <h2 className='checkout-container-title'>Checkout</h2>
       <div className='checkout-products'>

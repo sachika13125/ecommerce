@@ -9,68 +9,42 @@ import { useState, useRef } from 'react'
 import { SearchBarContainer } from './components/SearchBarContainer.jsx'
 import { Cart } from './components/Cart.jsx'
 
-
-
 function App() {
 
-
+  const [showCart, setShowCart] = useState(false)
   const [allProducts, setAllProducts] = useState([])
   const [total, setTotal] = useState(0)
   const [countProducts, setCountProducts] = useState(0)
 
   const headerRef = useRef(null)
+  const cartRef = useRef(null)
 
   const [products] = useState(initialProducts)
-  const [filters, setFilters] = useState({
-    category: 'all',
-    minPrice: 0,
-    search: ''
-  });
-
-  const filterProducts = (products) => {
-    return products.filter(product => {
-      return (
-        product.price >= filters.minPrice && 
-        (
-          filters.category === 'all' ||
-          product.category === filters.category 
-        ) &&
-        (
-          (product.title.toLowerCase().includes(filters.search.toLowerCase()))
-        )
-      )
-    })
-  }
-
-  const filteredProducts = filterProducts(products)
 
   return (
     <>
       <Nav />
-      <SearchBarContainer products={products} />
       <Hero />
-      <Header changeFilters={setFilters}
-      changeSearch={(newSearchTerm) => {
-        setFilters((prevFilters) => ({
-          ...prevFilters,
-          search: newSearchTerm,
-        }));
-      }}
+      <Header /*changeFilters={setFilters}*/
+      setShowCart={setShowCart}
       allProducts={allProducts}
       setAllProducts={setAllProducts}
       total={total}
       setTotal={setTotal}
       countProducts={countProducts}
       setCountProducts={setCountProducts}
-      headerRef={headerRef} />
-      <Products products={filteredProducts}
+      headerRef={headerRef}
+      cartRef={cartRef}/>
+      <SearchBarContainer products={products} />
+      <Products /*products={filteredProducts}*/
       allProducts={allProducts}
       setAllProducts={setAllProducts}
       total={total}
       setTotal={setTotal}
       countProducts={countProducts}
-      setCountProducts={setCountProducts} />
-      <Cart allProducts={allProducts} total={total} headerRef={headerRef} />
+      setCountProducts={setCountProducts}
+      /*changeFilters={setFilters}*/ />
+      {showCart && <Cart allProducts={allProducts} total={total} headerRef={headerRef} cartRef={cartRef} />}
       <Footer />
     </>
   )
