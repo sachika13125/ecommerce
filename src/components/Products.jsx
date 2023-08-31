@@ -1,6 +1,9 @@
 import './Products.css'
 import Popup from "./Popup.jsx";
 import React, { useState, useEffect } from 'react'
+import { Filters } from './Filters.jsx'
+// import './Header.css'
+
 
 export function Products ({ 
     allProducts, 
@@ -8,7 +11,8 @@ export function Products ({
     total, 
     setTotal,
     countProducts,
-    setCountProducts, 
+    setCountProducts,
+    changeFilters
 }) {
 
     const [products, setProducts] = useState([]);
@@ -28,11 +32,35 @@ export function Products ({
         }
       };
 
-
     
     useEffect(() => {
         fetchProducts();
     }, []);
+
+
+    const [filters, setFilters] = useState({
+        category: 'all',
+        minPrice: 0,
+        search: ''
+    });
+
+    const filterProducts = (products) => {
+    return products.filter(product => {
+        return (
+        product.price >= filters.minPrice && 
+        (
+            filters.category === 'all' ||
+            product.category === filters.category 
+        ) &&
+        (
+            (product.title.toLowerCase().includes(filters.search.toLowerCase()))
+        )
+        )
+    })
+    }
+
+    const filteredProducts = filterProducts(products);
+    
 
 
     const onAddProduct = product => {
@@ -52,7 +80,7 @@ export function Products ({
         setTotal(total + product.price * product.quantity)
         setCountProducts(countProducts + product.quantity)
         setAllProducts([...allProducts, product])
-    }
+    };
 
     const openModal = (product) => {
         setSelectedProduct(product);
@@ -64,10 +92,14 @@ export function Products ({
 
 
     return (
+        
         <main className='products'>
-
+            <Filters onChange={changeFilters}
+            changeFilters={setFilters} 
+            filteredProducts={filteredProducts}
+            />            
             <ul>
-                {products.map(product => (
+                {filteredProducts.map(product => (
                     <li key={product.id}>
                         <img 
                         src={product.thumbnail} 

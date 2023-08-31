@@ -1,10 +1,10 @@
-import { Filters } from './Filters.jsx'
+// import { Filters } from './Filters.jsx'
 import { useState } from 'react';
 import './Header.css'
 import SearchProducts from './SearchProducts.jsx'
 
 export function Header ({ 
-  changeFilters,
+  // changeFilters,
   changeSearch, 
   allProducts, 
   setAllProducts, 
@@ -115,7 +115,7 @@ export function Header ({
           } 
         </div>      
 
-        <Filters onChange={changeFilters} />
+        {/* <Filters onChange={changeFilters} /> */}
 				<SearchProducts onSearch={changeSearch} />
         <div ref={headerRef}></div>
     </header>
