@@ -10,6 +10,7 @@ import Accordion from './components/Accordion.jsx'
 import { useState, useRef } from 'react'
 import { SearchBarContainer } from './components/SearchBarContainer.jsx'
 import { Cart } from './components/Cart.jsx'
+import { Slider } from './components/Slider.jsx'
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
     <>
       <Nav />
       <SearchBarContainer products={products} />
-      <Hero />
+      <Slider />
       <Header /*changeFilters={setFilters}*/
       setShowCart={setShowCart}
       allProducts={allProducts}
@@ -47,6 +48,7 @@ function App() {
       setCountProducts={setCountProducts}
       /*changeFilters={setFilters}*/ />
       {showCart && <Cart allProducts={allProducts} total={total} headerRef={headerRef} cartRef={cartRef} />}
+      <Hero />
       <Accordion />
       <Contact />
       <Footer />

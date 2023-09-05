@@ -93,12 +93,12 @@ export function Products ({
 
     return (
         
-        <main className='products'>
+        <main className='products py-4'>
             <Filters onChange={changeFilters}
             changeFilters={setFilters} 
             filteredProducts={filteredProducts}
             />            
-            <ul>
+            <ul className='py-4'>
                 {filteredProducts.map(product => (
                     <li key={product.id}>
                         <img 
@@ -106,11 +106,12 @@ export function Products ({
                         alt={product.title}
                         onClick={() => openModal(product)}
                         />
-                        <div>
-                            <strong>{product.title} ${product.price}</strong>
+                        <div className='text-left text-xl py-4 px-5'>
+                            {product.title}
                         </div>
-                        <div>
-                            <button onClick={() => onAddProduct(product)}>
+                        <div className='flex justify-between items-center py-4 px-5'>
+                            <span className='text-left text-2xl font-bold'>${product.price}</span>
+                            <button className='addcart-btn' onClick={() => onAddProduct(product)}>
                                 Add to cart
                             </button>
                         </div>
